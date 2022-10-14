@@ -4,6 +4,7 @@ use App\Http\Controllers\CustomerController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -28,3 +29,4 @@ Route::prefix('/index')->group(function(){
     Route::get('/specials',[CustomerController::class,'specials'])->name('specials');
     Route::get('/error',[CustomerController::class,'error'])->name('error');
 });
+Route::resource('catelory','App\Http\Controllers\CategoryController');
